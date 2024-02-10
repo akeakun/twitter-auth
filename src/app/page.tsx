@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { SignOutButton } from "@clerk/nextjs";
+import { SignOutButton, currentUser, useUser } from "@clerk/nextjs";
 
-export default function Home() {
+const Home = async () => {
+  const user = await currentUser();
+
   return (
     <div
       style={{
@@ -11,13 +13,15 @@ export default function Home() {
         padding: "20px",
       }}
     >
-      <h1 className="text-center">Welcome Back!</h1>
+      <h1 className="text-center">Welcome {user?.username}&nbsp;!</h1>
       <p className="text-center">You are currently logged in.</p>
       <SignOutButton>
         <div className="flex justify-center p-4">
-        <Button className="w-fit">Sign Out</Button>
+          <Button className="w-fit">Sign Out</Button>
         </div>
       </SignOutButton>
     </div>
   );
-}
+};
+
+export default Home;
