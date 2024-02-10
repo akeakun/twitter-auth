@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { SignOutButton, currentUser, useUser } from "@clerk/nextjs";
-
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Protected Route',
+  description: 'This route is supposed to be protected and not accessible by anyone who is not loggged in.',
+}
 const Home = async () => {
   const user = await currentUser();
 
