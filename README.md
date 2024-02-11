@@ -1,6 +1,6 @@
 # Twitter Themed Authentication System with Clerk and Next.js
 
-This web application provides a robust authentication system built using Clerk authentication provider and Next.js for the frontend. With seamless integration and a user-friendly interface, users can securely sign up, log in, and manage their accounts effortlessly.
+This web application provides a robust authentication system built using Clerk authentication provider and Next.js for the frontend. With seamless integration and a user-friendly interface, users can securely sign up, log in and log out effortlessly.
 
 ## Features
 
